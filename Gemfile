@@ -6,6 +6,7 @@ gem 'devise'
 gem 'inherited_resources'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'declarative_authorization'
+gem "paperclip", "~> 2.3"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
