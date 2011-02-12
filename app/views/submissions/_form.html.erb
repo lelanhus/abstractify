@@ -27,6 +27,10 @@
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </div>
+  
+  <div>
+    <%= f.collection_select :conference_id, Conference.all, :id, :name, :prompt => "Select what conference" %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

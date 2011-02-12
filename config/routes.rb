@@ -1,8 +1,6 @@
 Abstractify::Application.routes.draw do
 
-  resources :conferences do
-    resources :submissions
-  end
+  resources :conferences, :submissions
 
   devise_for :users
   
