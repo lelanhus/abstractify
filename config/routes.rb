@@ -1,5 +1,12 @@
 Abstractify::Application.routes.draw do
+
+  resources :conferences do
+    resources :submissions
+  end
+
   devise_for :users
+  
+  root :to => "conferences#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
