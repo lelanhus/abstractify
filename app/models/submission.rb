@@ -3,4 +3,10 @@ class Submission < ActiveRecord::Base
   belongs_to :user
   
   has_attached_file :image
+  
+  validates_attachment_content_type :photo, 
+                                    :content_type => ['image/jpeg', 'image/png', 'image/gif']
+  validates :title, :authors, :instituitions, :body, :presence => true
+  validates :title, :authors, :institutions, :length => { :maximum => 255 }
+  validates :body, :length => { :maximum => 1650 }
 end
