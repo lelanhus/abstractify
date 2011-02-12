@@ -2,6 +2,11 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.4'
 
+gem 'devise'
+gem 'inherited_resources'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'declarative_authorization'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
