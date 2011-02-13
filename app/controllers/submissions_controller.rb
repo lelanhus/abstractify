@@ -1,6 +1,11 @@
 class SubmissionsController < InheritedResources::Base
   before_filter :authenticate_user!, :except => [:index, :show]
   
+  def index
+    @submissions = Submission.all
+    @grouped_submissions = @submissions.group_by { |t| t.conference }
+  end
+  
   def download_pdf
     @submission = Submission.find(params[:id])
     pdf = render_to_string(:action => 'pdf', :layout => false)

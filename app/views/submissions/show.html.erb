@@ -1,28 +1,34 @@
+<% content_for :header do %>
+  <hgroup>
+    <h1><%= @submission.title %></h1>
+    <h2><%= link_to @submission.conference.name + " Conference", conference_path(@submission.conference) %></h2>
+  </hgroup>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @submission.title %>
-</p>
+<p id="authors"><%= @submission.authors%></p>
+<p id="institutions"><%= @submission.institutions %></p>
 
-<p>
-  <b>Authors:</b>
-  <%= @submission.authors %>
-</p>
+<%= raw RedCloth.new(@submission.body, [:filter_html]).to_html %>
+<%= image_tag @submission.image.url if @submission.has_image? %>
 
-<p>
-  <b>Institutions:</b>
-  <%= @submission.institutions %>
-</p>
+<% content_for :sidebar do %>
 
-<p>
-  <b>Body:</b>
-  <%= @submission.body %>
-</p>
+  <% if @submission.user_id == current_user %>
+    <nav>
+      <ul>
+        <li>
+          <%= link_to 'Edit', edit_submission_path(@submission) %> 
+        </li>
+        <li>
+        <%= link_to 'Destroy', @submission, :confirm => 'Are you sure?', :method => :delete %>
+        </li>
+      </ul>
+    </nav>
 
-<% if @submission.user_id == current_user %>
-  <%= link_to 'Edit', edit_submission_path(@submission) %> | 
-  <%= link_to 'Destroy', @submission, :confirm => 'Are you sure?', :method => :delete %> |
+  <% end %>
+
+  <%= link_to 'Download PDF', download_pdf_submission_path(@submission) %>
+
 <% end %>
-<%= link_to 'PDF Version', download_pdf_submission_path(@submission) %> |
-<%= link_to 'Back', submissions_path %>

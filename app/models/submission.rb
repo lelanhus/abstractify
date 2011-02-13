@@ -17,6 +17,10 @@ class Submission < ActiveRecord::Base
     self.title.gsub(/[^0-9A-Za-z]/, '_') + "_" + Time.now.to_i.to_s
   end
   
+  def has_image?
+    !image_file_name.nil?
+  end
+  
   private
   
   def validates_conference_is_accepting_submissions

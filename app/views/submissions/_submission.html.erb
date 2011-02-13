@@ -1,10 +1,10 @@
-<article id="submission">
-  <header>
-    <h1><%= @submission.title %></h1>
-  </header>
+<div id="pdf_wrapper">
+  <h1><%= @submission.title %></h1>
   
-  <section id="authors">
-    <%= @submission.authors %>
-  </section>
-  <%= raw RedCloth.new(@submission.body, [:filter_html]).to_html %>
-</article>
+  <p><%= @submission.authors %></p>
+  <p><%= @submission.institutions %></p>
+  <div id="body">
+    <%= raw RedCloth.new(@submission.body, [:filter_html]).to_html %>
+  </div>
+  <%= image_tag @submission.image.url if @submission.has_image? %>
+</div>

@@ -1,5 +1,15 @@
-<h1>New submission</h1>
+<% content_for :header do %>
+  <h1>
+    New Submission
+    
+    <% unless params[:conference].blank? %>
+      for <%= Conference.find(params[:conference]).name %>
+    <% end %>
+  </h1>
+<% end %>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', submissions_path %>
+<% content_for :sidebar do %>
+  <%= render 'redcloth_help' %>
+<% end %>

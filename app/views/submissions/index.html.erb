@@ -1,23 +1,21 @@
-<h1>Listing submissions</h1>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Authors</th>
-    <th>Institutions</th>
-    <th>Body</th>
-  </tr>
-
-<% @submissions.each do |submission| %>
-  <tr>
-    <td><%= link_to submission.title, submission %></td>
-    <td><%= submission.authors %></td>
-    <td><%= submission.institutions %></td>
-    <td><%= submission.body %></td>
-  </tr>
+<% content_for :header do %>
+  <h1>All Submissions</h1>
 <% end %>
-</table>
 
-<br />
-
-<%= link_to 'New Submission', new_submission_path %>
+<ul>
+  <% @grouped_submissions.each do |conference, submissions| %>
+    <li>
+      <hgroup>
+        <h1><%= conference.name %></h1>
+        <h2>
+          <%= conference.start_date.strftime("%b %d, %Y") %> &mdash; <%= conference.end_date.strftime("%b %d, %Y") %>
+        </h2>
+      </hgroup>
+      <ul>
+        <% for submission in submissions %>
+          <li><%= link_to submission.title, submission %></li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>

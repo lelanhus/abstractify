@@ -10,33 +10,38 @@
       </ul>
     </div>
   <% end %>
+  
+  <fieldset>
+    <legend>Author Information</legend>
+      <%= f.label :names %>
+      <%= f.text_field :authors, :required => true, :placeholder => "Limit is 255 characters" %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :authors %><br />
-    <%= f.text_field :authors %>
-  </div>
-  <div class="field">
-    <%= f.label :institutions %><br />
-    <%= f.text_field :institutions %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
+
+      <%= f.label :institutions %>
+      <%= f.text_field :institutions, :required => true, :placeholder => "Limit is 255 characters" %>
+  </fieldset>
   
-  <div class="field">
-    <%= f.label :add_an_image %>
-    <%= f.file_field :image %>
-  </div>
+  <% if params[:conference].blank? %>
+    <fieldset>
+      <legend>Conference</legend>
+        <%= f.collection_select :conference_id, Conference.accepting_submissions, :id, :name, :prompt => "Select one" %>
+    </fieldset>
+  <% end %>
   
-  <div class="field">
-    <%= f.collection_select :conference_id, Conference.accepting_submissions, :id, :name, :prompt => "Select what conference" %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <fieldset>
+    <legend>Abstract</legend>
+      <%= f.label :title %>
+      <%= f.text_field :title, :required => true, :placeholder => "Limit is 255 characters" %>
+
+      <%= f.label :body %>
+      <%= f.text_area :body, :required => true, :placeholder => "Limit is 1600 characters" %>
+
+      <%= f.label :image %>:
+      <%= f.file_field :image %>
+  </fieldset>
+
+
+  <%= f.hidden_field :conference_id, :value => params[:conference] unless params[:conference].blank? %>
+
+    <%= f.submit "Submit Abstract" %> or <%= link_to 'Cancel', submissions_path %>
 <% end %>

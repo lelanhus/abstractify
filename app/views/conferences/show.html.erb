@@ -1,23 +1,26 @@
-<p id="notice"><%= notice %></p>
+<% content_for :header do %>
+  <hgroup>
+    <h1><%= @conference.name %></h1>
+    <h2>      
+      <%= @conference.start_date.strftime("%b %d, %Y") %> &mdash; <%= @conference.end_date.strftime("%b %d, %Y") %>
+    </h2>
+  </hgroup>
+<% end %>
 
-<p>
-  <b>Name:</b>
-  <%= @conference.name %>
-</p>
+<section id="submissions">
+  <ul>
+    <% @conference.submissions.each do |submission| %>
+      <li><%= link_to submission.title, submission %></li>
+    <% end %>
+  </ul>
+</section>
 
-<p>
-  <b>Start date:</b>
-  <%= @conference.start_date %>
-</p>
-
-<p>
-  <b>End date:</b>
-  <%= @conference.end_date %>
-</p>
-
-<p>
-  <b>Submission deadline:</b>
-  <%= @conference.submission_deadline %>
-</p>
-
-<%= link_to 'Back', conferences_path %>
+<% content_for :sidebar do %>
+  <nav>
+    <ul>
+      <% if @conference.accepting_submissions? %>
+        <li><%= link_to "Submit an abstract", new_submission_path(:conference => @conference.id) %></li>
+      <% end %>
+    </ul>
+  </nav>
+<% end %>
