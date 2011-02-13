@@ -80,8 +80,6 @@ GEM
     rack (1.2.1)
     rack-mount (0.6.13)
       rack (>= 1.0.0)
-    rack-ssl (1.2.0)
-      rack
     rack-test (0.5.7)
       rack (>= 1.0)
     rails (3.0.4)
@@ -119,7 +117,6 @@ DEPENDENCIES
   inherited_resources
   paperclip (~> 2.3)
   pdfkit
-  rack-ssl
   rails (= 3.0.4)
   rails_admin!
   sqlite3
