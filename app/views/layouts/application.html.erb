@@ -7,6 +7,12 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <% if user_signed_in? %>
+    <div id="user_block">
+      logged in as <%= current_user.email %> |
+      <%= link_to 'logout', destroy_user_session_path %>
+    </div>
+  <% end %>
   
   <header>
     <%= yield(:header) %>
