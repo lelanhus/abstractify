@@ -9,7 +9,7 @@ gem 'declarative_authorization'
 gem "paperclip", "~> 2.3"
 gem 'pdfkit'
 gem 'RedCloth'
-
+gem 'haml'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

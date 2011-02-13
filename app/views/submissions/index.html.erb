@@ -2,9 +2,9 @@
   <h1>All Submissions</h1>
 <% end %>
 
-<ul>
+<ul id="grouped_submissions">
   <% @grouped_submissions.each do |conference, submissions| %>
-    <li>
+    <li class="conference">
       <hgroup>
         <h1><%= conference.name %></h1>
         <h2>

@@ -11,33 +11,38 @@
     </div>
   <% end %>
   
-  <fieldset>
+  <fieldset id="author_info">
     <legend>Author Information</legend>
-      <%= f.label :names %>
-      <%= f.text_field :authors, :required => true, :placeholder => "Limit is 255 characters" %>
+    
+    <dl>
+      <dt><%= f.label :names %></dt>
+      <dd><%= f.text_field :authors, :required => true, :placeholder => "Limit is 255 characters" %></dd>
 
 
-      <%= f.label :institutions %>
-      <%= f.text_field :institutions, :required => true, :placeholder => "Limit is 255 characters" %>
+      <dt><%= f.label :institutions %></dt>
+      <dd><%= f.text_field :institutions, :required => true, :placeholder => "Limit is 255 characters" %></dd>
+    <dl>
   </fieldset>
   
   <% if params[:conference].blank? %>
     <fieldset>
       <legend>Conference</legend>
-        <%= f.collection_select :conference_id, Conference.accepting_submissions, :id, :name, :prompt => "Select one" %>
+      
+      <%= f.collection_select :conference_id, Conference.accepting_submissions, :id, :name, :prompt => "Select one" %>
     </fieldset>
   <% end %>
   
-  <fieldset>
+  <fieldset id="abstract_info">
     <legend>Abstract</legend>
-      <%= f.label :title %>
-      <%= f.text_field :title, :required => true, :placeholder => "Limit is 255 characters" %>
+    
+    <dl>
+      <dt><%= f.label :title %></dt>
+      <dd><%= f.text_field :title, :required => true, :placeholder => "Limit is 255 characters" %></dd>
 
-      <%= f.label :body %>
-      <%= f.text_area :body, :required => true, :placeholder => "Limit is 1600 characters" %>
-
-      <%= f.label :image %>:
-      <%= f.file_field :image %>
+      <dt><%= f.label :body %></dt>
+      <dd><%= f.text_area :body, :required => true, :placeholder => "Limit is 1600 characters" %><dd>
+    </dl>
+    <%= f.file_field :image, :class => :image %>
   </fieldset>
 
 

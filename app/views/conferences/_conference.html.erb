@@ -1,5 +1,5 @@
-<li>
-  <section class="accepting_submissions">
+<li class="accepting_submissions">
+  <section>
     <header>
       <h1>
         <%= link_to conference.name, conference %>
@@ -8,8 +8,8 @@
     <p>
       <%= conference.start_date.strftime("%b %d") %> &mdash; <%= conference.end_date.strftime("%b %d") %>
     </p>
-    <p><%= conference.start_date.strftime("%Y") %></p>
-    <p>
+    <p class="year"><%= conference.start_date.strftime("%Y") %></p>
+    <p class="submission_deadline">
       Submission Deadline: <%= conference.submission_deadline.to_s(:submission_deadline) %>
     </p>
   </section>

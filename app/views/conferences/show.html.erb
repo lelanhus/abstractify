@@ -8,6 +8,9 @@
 <% end %>
 
 <section id="submissions">
+  <header>
+    <h1>Abstracts</h1>
+  </header>
   <ul>
     <% @conference.submissions.each do |submission| %>
       <li><%= link_to submission.title, submission %></li>
@@ -16,11 +19,9 @@
 </section>
 
 <% content_for :sidebar do %>
-  <nav>
-    <ul>
-      <% if @conference.accepting_submissions? %>
-        <li><%= link_to "Submit an abstract", new_submission_path(:conference => @conference.id) %></li>
-      <% end %>
-    </ul>
-  </nav>
+  <aside>
+    <% if @conference.accepting_submissions? %>
+      <%= link_to "Submit an abstract", new_submission_path(:conference => @conference.id) %>
+    <% end %>
+  </aside>
 <% end %>

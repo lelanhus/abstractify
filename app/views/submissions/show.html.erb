@@ -7,13 +7,17 @@
 
 <p id="notice"><%= notice %></p>
 
-<p id="authors"><%= @submission.authors%></p>
-<p id="institutions"><%= @submission.institutions %></p>
+<div id="abstract_body">
+  <p id="authors"><%= @submission.authors%></p>
+  <p id="institutions"><%= @submission.institutions %></p>
 
-<%= raw RedCloth.new(@submission.body, [:filter_html]).to_html %>
-<%= image_tag @submission.image.url if @submission.has_image? %>
+  <%= raw RedCloth.new(@submission.body, [:filter_html]).to_html %>
+  <%= image_tag @submission.image.url if @submission.has_image? %>
+</div>
+
 
 <% content_for :sidebar do %>
+  <aside>
 
   <% if @submission.user_id == current_user %>
     <nav>
@@ -30,5 +34,5 @@
   <% end %>
 
   <%= link_to 'Download PDF', download_pdf_submission_path(@submission) %>
-
+  </aside>
 <% end %>

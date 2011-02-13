@@ -1,0 +1,194 @@
+/* ================ */
+/* = The 1Kb Grid = */
+/* 12 columns, 60 pixels each, with 20 pixel gutter */
+/* ================ */
+.grid_1 {
+  width: 60px; }
+
+.grid_2, form#new_submission fieldset#author_info dt {
+  width: 140px; }
+
+.grid_3 {
+  width: 220px; }
+
+.grid_4, aside, ul#grouped_submissions li.conference hgroup {
+  width: 300px; }
+
+.grid_5 {
+  width: 380px; }
+
+.grid_6, div#user_block nav, div#user_block p, form#new_submission fieldset#author_info dd {
+  width: 460px; }
+
+.grid_7, ul#grouped_submissions li.conference ul {
+  width: 540px; }
+
+.grid_8, section#submissions, form#new_submission, div#abstract_body {
+  width: 620px; }
+
+.grid_9 {
+  width: 700px; }
+
+.grid_10 {
+  width: 780px; }
+
+.grid_11 {
+  width: 860px; }
+
+.grid_12 {
+  width: 940px; }
+
+.column, div#user_block nav, div#user_block p, section#submissions, form#new_submission, div#abstract_body, aside, form#new_submission fieldset#author_info dt, form#new_submission fieldset#author_info dd, form#new_submission fieldset#abstract_info dl, ul#grouped_submissions li.conference hgroup, ul#grouped_submissions li.conference ul {
+  margin: 0 10px;
+  overflow: hidden;
+  float: left;
+  display: inline; }
+
+.row, article#page, footer, div#user_block div, ul#grouped_submissions li.conference {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden; }
+  .row .row, article#page .row, footer .row, div#user_block div .row, ul#grouped_submissions li.conference .row, .row article#page, article#page article#page, footer article#page, div#user_block div article#page, ul#grouped_submissions li.conference article#page, .row footer, article#page footer, footer footer, div#user_block div footer, ul#grouped_submissions li.conference footer, .row div#user_block div, div#user_block .row div, article#page div#user_block div, div#user_block article#page div, footer div#user_block div, div#user_block footer div, div#user_block div div, ul#grouped_submissions li.conference div#user_block div, div#user_block ul#grouped_submissions li.conference div, .row ul#grouped_submissions li.conference, ul#grouped_submissions .row li.conference, article#page ul#grouped_submissions li.conference, ul#grouped_submissions article#page li.conference, footer ul#grouped_submissions li.conference, ul#grouped_submissions footer li.conference, div#user_block div ul#grouped_submissions li.conference, ul#grouped_submissions div#user_block div li.conference, ul#grouped_submissions li.conference li.conference {
+    margin: 0 -10px;
+    width: auto;
+    display: inline-block; }
+
+article, section, header, hgroup, aside, nav {
+  display: block; }
+
+body, article, section, header, hgroup, aside, h1, h2, p, a, img, nav, label, input {
+  margin: 0;
+  padding: 0; }
+
+footer {
+  padding-top: 20px;
+  margin-top: 20px;
+  text-align: center; }
+
+div#user_block {
+  margin-bottom: 20px; }
+  div#user_block nav a, div#user_block p a {
+    display: inline-block;
+    padding: 5px 0px 5px 0px; }
+  div#user_block nav a:hover, div#user_block p a:hover {
+    background-color: #656565; }
+  div#user_block p {
+    text-align: right; }
+
+header#main_header {
+  margin-bottom: 20px; }
+
+ol#conferences {
+  margin: 0px;
+  padding: 0px; }
+  ol#conferences li.accepting_submissions {
+    margin-bottom: 20px; }
+
+section#submissions ul {
+  margin-left: -40px; }
+
+aside a {
+  display: block; }
+
+form#new_submission fieldset {
+  margin-bottom: 20px; }
+form#new_submission fieldset#author_info dt, form#new_submission fieldset#author_info dd {
+  margin-top: 10px; }
+form#new_submission fieldset#author_info dt {
+  margin-left: -50px;
+  text-align: right; }
+form#new_submission fieldset#author_info dd input {
+  width: 450px; }
+form#new_submission fieldset#abstract_info dt, form#new_submission fieldset#abstract_info dd {
+  margin: 0px; }
+form#new_submission fieldset#abstract_info dt {
+  margin-top: 10px; }
+form#new_submission fieldset#abstract_info input, form#new_submission fieldset#abstract_info textarea {
+  width: 550px; }
+form#new_submission fieldset#abstract_info input.image {
+  margin: 10px 0px 0px 10px; }
+form#new_submission input#submission_submit {
+  margin-left: 20px; }
+
+ul#grouped_submissions {
+  list-style: none;
+  padding: 0px;
+  margin: 0px; }
+  ul#grouped_submissions li.conference {
+    padding-bottom: 30px; }
+
+div#abstract_body p {
+  margin-bottom: 10px; }
+div#abstract_body p#authors {
+  margin-bottom: 10px; }
+div#abstract_body p#institutions {
+  margin-bottom: 20px; }
+
+body {
+  color: #333;
+  font-size: 14px;
+  line-height: 24px;
+  font-style: Helvetica, arial, sans-serif; }
+
+div#user_block {
+  background: #000;
+  color: #fff; }
+  div#user_block a {
+    color: #fff; }
+
+ol#conferences {
+  list-style: none; }
+
+header#main_header {
+  border-bottom: 1px solid #4d4d4d;
+  padding-bottom: 10px; }
+  header#main_header h1 {
+    font-size: 3em;
+    padding-top: 5px; }
+  header#main_header hgroup h1 {
+    margin-bottom: 15px; }
+  header#main_header hgroup h2 {
+    color: #8d8d8d; }
+
+section#main_content h1 {
+  font-size: 2em;
+  margin-bottom: 10px; }
+section#main_content p {
+  color: #8d8d8d;
+  font-size: 1.25em; }
+section#main_content p.year {
+  font-size: 1.75em;
+  margin-bottom: 10px; }
+section#main_content p.submission_deadline {
+  color: #333;
+  font-size: 1.5em; }
+
+section#submissions, div#abstract_body {
+  border-right: 2px solid #e5e5e5; }
+  section#submissions ul, div#abstract_body ul {
+    list-style: none;
+    font-size: 1.25em; }
+
+form#new_submission fieldset {
+  border: none;
+  border-top: 1px solid #8c8c8c; }
+  form#new_submission fieldset legend {
+    font-size: 1.5em; }
+form#new_submission input, form#new_submission textarea {
+  font-size: 1.25em;
+  padding: 2px; }
+form#new_submission fieldset#abstract_info {
+  border-bottom: 2px solid #8c8c8c; }
+
+ul#grouped_submissions li.conference hgroup h1 {
+  font-size: 1.5em;
+  margin: 0px; }
+ul#grouped_submissions li.conference hgroup h2 {
+  color: #cbcbcb;
+  font-size: 1.25em; }
+
+div#abstract_body p {
+  color: #333; }
+
+footer {
+  border-top: 1px solid #4d4d4d; }

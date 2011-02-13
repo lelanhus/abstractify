@@ -1,0 +1,136 @@
+article#page, footer {
+  @extend .row;
+}
+
+footer {
+  padding-top: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+div#user_block {
+  margin-bottom: 20px;
+  div {
+    @extend .row;
+  }
+  nav, p {
+    @extend .column;
+    @extend .grid_6;
+    a {
+      display: inline-block;
+      padding: 5px 0px 5px 0px;
+    }
+    a:hover {
+      background-color: #656565;
+    }
+  }
+  p {
+    text-align: right;
+  }
+}
+
+header#main_header {
+  margin-bottom: 20px;
+}
+
+ol#conferences {
+  margin: 0px;
+  padding: 0px;
+  li.accepting_submissions {
+    margin-bottom: 20px;
+  }
+}
+
+section#submissions, form#new_submission, div#abstract_body {
+  @extend .column;
+  @extend .grid_8;
+}
+
+section#submissions {
+  ul {
+    margin-left: -40px;
+  }
+}
+
+aside {
+  @extend .column;
+  @extend .grid_4;
+  a {
+    display: block;
+  }
+}
+
+form#new_submission {
+  fieldset {
+    margin-bottom: 20px;
+  }
+  fieldset#author_info {
+    dt, dd {
+      @extend .column;
+      margin-top: 10px;
+    }
+    dt {
+      @extend .grid_2;
+      margin-left: -50px;
+      text-align: right;
+    }
+    dd {
+      @extend .grid_6;
+      input {
+        width: 450px;
+      }
+    }
+  }
+  
+  fieldset#abstract_info {
+    dl {
+      @extend .column;
+    }
+    dt, dd {
+      margin: 0px;
+    }
+    dt {
+      margin-top: 10px;
+    }
+    input, textarea {
+      width: 550px;
+    }
+    input.image {
+      margin: 10px 0px 0px 10px;
+    }
+  }
+  input#submission_submit {
+    margin-left: 20px;
+  }
+}
+
+ul#grouped_submissions {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  li.conference {
+    padding-bottom: 30px;
+    @extend .row;
+    hgroup {
+      @extend .column;
+      @extend .grid_4;
+    }
+    ul {
+      @extend .column;
+      @extend .grid_7;
+    }
+  }
+}
+
+div#abstract_body {
+  p {
+    margin-bottom: 10px;
+  }
+  p#authors {
+    margin-bottom: 10px;
+  }
+  p#institutions {
+    margin-bottom: 20px;
+  }
+
+}

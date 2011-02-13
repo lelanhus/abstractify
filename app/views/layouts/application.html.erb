@@ -7,20 +7,35 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <% if user_signed_in? %>
     <div id="user_block">
-      logged in as <%= current_user.email %> |
-      <%= link_to 'logout', destroy_user_session_path %>
+      <div>
+        <nav>
+          <%= link_to "Conferences", conferences_path %> |
+          <%= link_to "Submissions", submissions_path %> |
+          <%= link_to "New Subission", new_submission_path %>
+        </nav>
+        <p>
+          logged in as <%= current_user.email %> |
+          <%= link_to 'logout', destroy_user_session_path %>
+        </p>
+      </div>
     </div>
-  <% end %>
+
+  <article id="page">
+    <header id="main_header">
+      <%= yield(:header) %>
+    </header>
+
+    <section id="main_content">
+      <%= yield %>
+    </section>
+
+    <%= yield(:sidebar) %>
+  </article>
   
-  <header>
-    <%= yield(:header) %>
-  </header>
 
-  <%= yield %>
-
-  <%= yield(:sidebar) %>
-
+  <footer>
+    &copy; 2011, <a href="http://physiology.umc.edu">University of Mississippi Medical Center Department of Physiology and Biophysics</a>
+  </footer>
 </body>
 </html>

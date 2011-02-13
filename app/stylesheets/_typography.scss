@@ -1,0 +1,107 @@
+body {
+  color: #333;
+  font-size: 14px;
+  line-height: 24px;
+  font-style: Helvetica, arial, sans-serif;
+}
+
+div#user_block {
+  background: #000;
+  color: #fff;
+  a {
+    color: #fff;
+  }
+}
+
+ol#conferences {
+  list-style: none;
+}
+
+header#main_header {
+  border-bottom: 1px solid #4d4d4d;
+  padding-bottom: 10px;
+  h1 {
+    font-size: 3em;
+    padding-top: 5px;
+  }
+  hgroup {
+    h1 {
+      margin-bottom: 15px;
+    }
+    h2 {
+      color: #8d8d8d
+    }
+  }
+}
+
+section#main_content {
+  h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  p {
+    color: #8d8d8d;
+    font-size: 1.25em;
+  }
+  p.year {
+    font-size: 1.75em;
+    margin-bottom: 10px;
+  }
+  p.submission_deadline {
+    color: #333;
+    font-size: 1.5em;
+  }
+}
+
+section#submissions, div#abstract_body {
+  border-right: 2px solid #e5e5e5;
+  ul {
+    list-style: none;
+    font-size: 1.25em;
+  }
+}
+
+form#new_submission {
+  fieldset {
+    border: none;
+    border-top: 1px solid #8c8c8c;
+    legend {
+      font-size: 1.5em;
+    }
+  }
+  input, textarea {
+    font-size: 1.25em;
+    padding: 2px;
+  }
+  
+  fieldset#abstract_info {
+    border-bottom: 2px solid #8c8c8c;
+  }
+}
+
+ul#grouped_submissions {
+  li.conference {
+    hgroup {
+      h1 {
+        font-size: 1.5em;
+        margin: 0px;
+      }
+      h2 {
+        color: #cbcbcb;
+        font-size: 1.25em;
+      }
+    }
+  }
+}
+
+div#abstract_body {
+  p {
+    color: #333;
+  }
+
+}
+
+footer {
+  border-top: 1px solid #4d4d4d;
+  
+}
