@@ -13,6 +13,8 @@ class Submission < ActiveRecord::Base
   
   before_save :validates_conference_is_accepting_submissions
   
+  attr_protected :user_id
+  
   def pdf_filename
     self.title.gsub(/[^0-9A-Za-z]/, '_') + "_" + Time.now.to_i.to_s
   end

@@ -5,8 +5,6 @@
   </hgroup>
 <% end %>
 
-<p id="notice"><%= notice %></p>
-
 <div id="abstract_body">
   <p id="authors"><%= @submission.authors%></p>
   <p id="institutions"><%= @submission.institutions %></p>
@@ -19,7 +17,7 @@
 <% content_for :sidebar do %>
   <aside>
 
-  <% if @submission.user_id == current_user %>
+  <% if @submission.user_id == current_user.id %>
     <nav>
       <ul>
         <li>

@@ -1,8 +1,15 @@
+
+
 body {
   color: #333;
   font-size: 14px;
   line-height: 24px;
   font-style: Helvetica, arial, sans-serif;
+}
+
+p#notice {
+  background-color: #c1dd56;
+  border: 1px solid #7e9038;
 }
 
 div#user_block {
@@ -35,6 +42,7 @@ header#main_header {
 }
 
 section#main_content {
+
   h1 {
     font-size: 2em;
     margin-bottom: 10px;
@@ -103,5 +111,5 @@ div#abstract_body {
 
 footer {
   border-top: 1px solid #4d4d4d;
-  
 }
+
