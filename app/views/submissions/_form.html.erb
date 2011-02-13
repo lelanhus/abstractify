@@ -34,7 +34,7 @@
   </div>
   
   <div class="field">
-    <%= f.collection_select :conference_id, Conference.all, :id, :name, :prompt => "Select what conference" %>
+    <%= f.collection_select :conference_id, Conference.accepting_submissions, :id, :name, :prompt => "Select what conference" %>
   </div>
   <div class="actions">
     <%= f.submit %>
