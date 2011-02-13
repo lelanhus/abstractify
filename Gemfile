@@ -10,6 +10,7 @@ gem "paperclip", "~> 2.3"
 gem 'pdfkit'
 gem 'RedCloth'
 gem 'haml'
+gem 'capistrano'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
