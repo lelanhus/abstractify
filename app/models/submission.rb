@@ -10,4 +10,8 @@ class Submission < ActiveRecord::Base
   validates :title, :authors, :institutions, :length => { :maximum => 255 }
   validates :body, :length => { :maximum => 1650 }
   validates :title, :uniqueness => true
+  
+  def pdf_filename
+    self.title.gsub(/[^0-9A-Za-z]/, '_') + "_" + Time.now.to_i.to_s
+  end
 end

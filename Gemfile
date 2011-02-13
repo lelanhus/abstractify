@@ -8,6 +8,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 gem 'declarative_authorization'
 gem "paperclip", "~> 2.3"
 gem 'pdfkit'
+gem 'RedCloth'
 
 
 # Bundle edge Rails instead:

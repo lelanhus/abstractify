@@ -1,0 +1,10 @@
+<article id="submission">
+  <header>
+    <h1><%= @submission.title %></h1>
+  </header>
+  
+  <section id="authors">
+    <%= @submission.authors %>
+  </section>
+  <%= raw RedCloth.new(@submission.body, [:filter_html]).to_html %>
+</article>

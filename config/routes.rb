@@ -1,6 +1,10 @@
 Abstractify::Application.routes.draw do
 
-  resources :conferences, :submissions
+  resources :conferences
+  
+  resources :submissions do
+    get :download_pdf, :on => :member
+  end
 
   devise_for :users
   
