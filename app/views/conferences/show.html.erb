@@ -21,7 +21,7 @@
 <% content_for :sidebar do %>
   <aside>
     <% if @conference.accepting_submissions? %>
-      <%= link_to "Submit an abstract", new_submission_path(:conference => @conference.id) %>
+      <%= link_to "Submit an abstract", new_submission_path(:conference => @conference.id), :class => :submit_abstract_link %>
     <% end %>
   </aside>
 <% end %>

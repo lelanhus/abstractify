@@ -14,7 +14,7 @@
 .grid_4, aside, ul#grouped_submissions li.conference hgroup {
   width: 300px; }
 
-.grid_5 {
+.grid_5, a.abstract_link {
   width: 380px; }
 
 .grid_6, div#user_block nav, div#user_block p, form#new_submission fieldset#author_info dd {
@@ -70,13 +70,12 @@ div#user_block {
   div#user_block nav a, div#user_block p a {
     display: inline-block;
     padding: 5px 0px 5px 0px; }
-  div#user_block nav a:hover, div#user_block p a:hover {
-    background-color: #656565; }
   div#user_block p {
     text-align: right; }
 
 header#main_header {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding-bottom: 10px; }
 
 ol#conferences {
   margin: 0px;
@@ -110,12 +109,19 @@ form#new_submission fieldset#abstract_info input.image {
 form#new_submission input#submission_submit {
   margin-left: 20px; }
 
+a.abstract_link {
+  display: block;
+  margin-top: 5px;
+  text-align: center; }
+
 ul#grouped_submissions {
   list-style: none;
   padding: 0px;
   margin: 0px; }
   ul#grouped_submissions li.conference {
     padding-bottom: 30px; }
+    ul#grouped_submissions li.conference ul {
+      list-style: none; }
 
 div#abstract_body p {
   margin-bottom: 10px; }
@@ -127,68 +133,58 @@ div#abstract_body p#institutions {
 body {
   color: #333;
   font-size: 14px;
-  line-height: 24px;
-  font-style: Helvetica, arial, sans-serif; }
+  font-family: Helvetica, arial, sans-serif;
+  line-height: 24px; }
+
+a {
+  color: #333; }
+
+a:hover {
+  background-color: #c5c5c5; }
 
 div#user_block {
-  background: #000;
-  color: #fff; }
+  background-color: #000;
+  color: #e5e5e5; }
   div#user_block a {
-    color: #fff; }
-
-ol#conferences {
-  list-style: none; }
+    color: #e5e5e5; }
+  div#user_block a:hover {
+    background-color: #656565; }
 
 header#main_header {
-  border-bottom: 1px solid #4d4d4d;
-  padding-bottom: 10px; }
-  header#main_header h1 {
-    font-size: 3em;
-    padding-top: 5px; }
+  border-bottom: 1px solid #c5c5c5; }
   header#main_header hgroup h1 {
     margin-bottom: 15px; }
   header#main_header hgroup h2 {
-    color: #8d8d8d; }
-
-section#main_content h1 {
-  font-size: 2em;
-  margin-bottom: 10px; }
-section#main_content p {
-  color: #8d8d8d;
-  font-size: 1.25em; }
-section#main_content p.year {
-  font-size: 1.75em;
-  margin-bottom: 10px; }
-section#main_content p.submission_deadline {
-  color: #333;
-  font-size: 1.5em; }
-
-section#submissions, div#abstract_body {
-  border-right: 2px solid #e5e5e5; }
-  section#submissions ul, div#abstract_body ul {
-    list-style: none;
-    font-size: 1.25em; }
-
-form#new_submission fieldset {
-  border: none;
-  border-top: 1px solid #8c8c8c; }
-  form#new_submission fieldset legend {
-    font-size: 1.5em; }
-form#new_submission input, form#new_submission textarea {
-  font-size: 1.25em;
-  padding: 2px; }
-form#new_submission fieldset#abstract_info {
-  border-bottom: 2px solid #8c8c8c; }
-
-ul#grouped_submissions li.conference hgroup h1 {
-  font-size: 1.5em;
-  margin: 0px; }
-ul#grouped_submissions li.conference hgroup h2 {
-  color: #cbcbcb;
-  font-size: 1.25em; }
-
-div#abstract_body p {
-  color: #333; }
+    color: #8c8c8c; }
+    header#main_header hgroup h2 a {
+      color: #8c8c8c; }
 
 footer {
-  border-top: 1px solid #4d4d4d; }
+  border-top: 1px solid #c5c5c5; }
+
+li.accepting_submissions h1 {
+  font-size: 2em; }
+li.accepting_submissions p {
+  color: #8c8c8c; }
+li.accepting_submissions p.year {
+  font-size: 1.5em; }
+li.accepting_submissions p.submission_deadline {
+  color: #333;
+  font-size: 1.75em; }
+
+li.conference hgroup h2 {
+  color: #8c8c8c; }
+
+a.pdf_link, a.submit_abstract_link, a.abstract_link {
+  background-color: #2f6d7a;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  color: #f2efbd;
+  font-size: 1.5em; }
+
+a.pdf_link, a.submit_abstract_link {
+  padding: 5px 0px 5px 0px;
+  text-align: center; }
+
+a.pdf_link:hover, a.submit_abstract_link:hover, a.abstract_link:hover {
+  background-color: #70a99a; }

@@ -20,9 +20,6 @@ div#user_block {
       display: inline-block;
       padding: 5px 0px 5px 0px;
     }
-    a:hover {
-      background-color: #656565;
-    }
   }
   p {
     text-align: right;
@@ -31,6 +28,7 @@ div#user_block {
 
 header#main_header {
   margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 ol#conferences {
@@ -104,6 +102,13 @@ form#new_submission {
   }
 }
 
+a.abstract_link {
+  @extend .grid_5;
+  display: block;
+  margin-top: 5px;
+  text-align: center;
+}
+
 ul#grouped_submissions {
   list-style: none;
   padding: 0px;
@@ -118,6 +123,7 @@ ul#grouped_submissions {
     ul {
       @extend .column;
       @extend .grid_7;
+      list-style: none;
     }
   }
 }

@@ -1,115 +1,85 @@
-
-
 body {
   color: #333;
   font-size: 14px;
+  font-family: Helvetica, arial, sans-serif;
   line-height: 24px;
-  font-style: Helvetica, arial, sans-serif;
 }
 
-p#notice {
-  background-color: #c1dd56;
-  border: 1px solid #7e9038;
+a {
+  color: #333;
+}
+
+a:hover {
+  background-color: #c5c5c5;
 }
 
 div#user_block {
-  background: #000;
-  color: #fff;
+  background-color: #000;
+  color: #e5e5e5;
   a {
-    color: #fff;
+    color: #e5e5e5;
   }
-}
-
-ol#conferences {
-  list-style: none;
+  a:hover {
+    background-color: #656565;
+  }
 }
 
 header#main_header {
-  border-bottom: 1px solid #4d4d4d;
-  padding-bottom: 10px;
-  h1 {
-    font-size: 3em;
-    padding-top: 5px;
-  }
+  border-bottom: 1px solid #c5c5c5;
   hgroup {
     h1 {
       margin-bottom: 15px;
     }
     h2 {
-      color: #8d8d8d
-    }
-  }
-}
-
-section#main_content {
-
-  h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
-  }
-  p {
-    color: #8d8d8d;
-    font-size: 1.25em;
-  }
-  p.year {
-    font-size: 1.75em;
-    margin-bottom: 10px;
-  }
-  p.submission_deadline {
-    color: #333;
-    font-size: 1.5em;
-  }
-}
-
-section#submissions, div#abstract_body {
-  border-right: 2px solid #e5e5e5;
-  ul {
-    list-style: none;
-    font-size: 1.25em;
-  }
-}
-
-form#new_submission {
-  fieldset {
-    border: none;
-    border-top: 1px solid #8c8c8c;
-    legend {
-      font-size: 1.5em;
-    }
-  }
-  input, textarea {
-    font-size: 1.25em;
-    padding: 2px;
-  }
-  
-  fieldset#abstract_info {
-    border-bottom: 2px solid #8c8c8c;
-  }
-}
-
-ul#grouped_submissions {
-  li.conference {
-    hgroup {
-      h1 {
-        font-size: 1.5em;
-        margin: 0px;
-      }
-      h2 {
-        color: #cbcbcb;
-        font-size: 1.25em;
+      color: #8c8c8c;
+      a {
+        color: #8c8c8c;
       }
     }
   }
-}
-
-div#abstract_body {
-  p {
-    color: #333;
-  }
-
 }
 
 footer {
-  border-top: 1px solid #4d4d4d;
+  border-top: 1px solid #c5c5c5;
 }
 
+li.accepting_submissions {
+  h1 {
+    font-size: 2em;
+  }
+  p {
+    color: #8c8c8c;
+  }
+  p.year {
+    font-size: 1.5em;
+  }
+  p.submission_deadline {
+    color: #333;
+    font-size: 1.75em;
+  }
+}
+
+li.conference {
+  hgroup {
+    h2 {
+      color: #8c8c8c;
+    }
+  }
+}
+
+a.pdf_link, a.submit_abstract_link, a.abstract_link {
+  background-color: #2f6d7a;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  color: #f2efbd;
+  font-size: 1.5em;
+}
+
+a.pdf_link, a.submit_abstract_link {
+  padding: 5px 0px 5px 0px;
+  text-align: center;
+}
+
+a.pdf_link:hover, a.submit_abstract_link:hover, a.abstract_link:hover {
+  background-color: #70a99a;
+}

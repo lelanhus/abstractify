@@ -12,5 +12,6 @@
     <p class="submission_deadline">
       Submission Deadline: <%= conference.submission_deadline.to_s(:submission_deadline) %>
     </p>
+    <%= link_to "Submit an abstract", new_submission_path(:conference => conference.id), :class => :abstract_link %>
   </section>
 </li>
