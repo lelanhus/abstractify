@@ -5,8 +5,18 @@ Abstractify::Application.routes.draw do
   resources :submissions do
     get :download_pdf, :on => :member
   end
+  
+  if Rails.env.production?
+    match "users(/*path)", :to => redirect { |_, request|
+      "https://" + request.host_with_port + request.fullpath }
+      
+    match "admin(/*path)", :to => redirect { |_, request|
+      "https://" + request.host_with_port + request.fullpath }
+  end
 
   devise_for :users
+  
+
   
   root :to => "conferences#index"
 

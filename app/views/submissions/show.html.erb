@@ -17,18 +17,20 @@
 <% content_for :sidebar do %>
   <aside>
 
-  <% if @submission.user_id == current_user.id %>
-    <nav>
-      <ul>
-        <li>
-          <%= link_to 'Edit', edit_submission_path(@submission) %> 
-        </li>
-        <li>
-        <%= link_to 'Destroy', @submission, :confirm => 'Are you sure?', :method => :delete %>
-        </li>
-      </ul>
-    </nav>
+  <% if user_signed_in? %>
+    <% if @submission.user_id == current_user.id %>
+      <nav>
+        <ul>
+          <li>
+            <%= link_to 'Edit', edit_submission_path(@submission) %> 
+          </li>
+          <li>
+          <%= link_to 'Destroy', @submission, :confirm => 'Are you sure?', :method => :delete %>
+          </li>
+        </ul>
+      </nav>
 
+    <% end %>
   <% end %>
 
   <%= link_to 'Download PDF', download_pdf_submission_path(@submission), :class => :pdf_link %>

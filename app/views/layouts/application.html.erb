@@ -14,10 +14,12 @@
           <%= link_to "Submissions", submissions_path %> |
           <%= link_to "New Subission", new_submission_path %>
         </nav>
-        <p>
-          logged in as <%= current_user.email %> |
-          <%= link_to 'logout', destroy_user_session_path %>
-        </p>
+        <% if user_signed_in? %>
+          <p>
+            logged in as <%= current_user.email %> |
+            <%= link_to 'logout', destroy_user_session_path %>
+          </p>
+        <% end %>
       </div>
     </div>
 
