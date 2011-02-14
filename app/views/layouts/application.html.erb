@@ -12,7 +12,7 @@
         <nav>
           <%= link_to "Conferences", conferences_path %> |
           <%= link_to "Submissions", submissions_path %> |
-          <%= link_to "New Subission", new_submission_path %>
+          <%= link_to "New Subission", new_submission_path unless Conference.accepting_submissions.blank? %>
         </nav>
         <% if user_signed_in? %>
           <p>
