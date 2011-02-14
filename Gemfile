@@ -11,7 +11,7 @@ gem 'pdfkit'
 gem 'RedCloth'
 gem 'haml'
 gem 'capistrano'
-#gem 'rack-ssl'
+gem 'rack-ssl'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
