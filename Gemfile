@@ -11,7 +11,7 @@ gem 'pdfkit'
 gem 'RedCloth'
 gem 'haml'
 gem 'capistrano'
-#gem 'jquery-rails'
+gem 'jquery-rails'
 gem 'rack-ssl'
 
 # Bundle edge Rails instead:
