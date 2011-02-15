@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Abstractify | Down for <%= reason ? reason : "maintenance" %>.</title>
+  <%= stylesheet_link_tag "maintenance" %>
+</head>
+<body>
+  <div>
+    <h1>Abstractify</h1>
+    
+    <div id="message">
+      <h2>down for maintenance.</h2>
+      <p>
+        We're sorry for the inconvenience.
+        We'll be back <%= deadline ? "by #{deadline}" : "shortly" %>.
+      </p>
+    </div>
+
+  </div>
+</body>
+</html>
