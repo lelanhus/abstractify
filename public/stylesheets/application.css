@@ -53,7 +53,7 @@
     width: auto;
     display: inline-block; }
 
-article, section, header, hgroup, aside, nav {
+article, section, header, hgroup, aside, nav, footer {
   display: block; }
 
 body, article, section, header, hgroup, aside, h1, h2, p, a, img, nav, label, input {
