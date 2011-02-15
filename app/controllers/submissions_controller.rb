@@ -15,7 +15,7 @@ class SubmissionsController < InheritedResources::Base
     @submission = Submission.find(params[:id])
     pdf = render_to_string(:action => 'pdf', :layout => false)
     pdf = PDFKit.new(pdf)
-    send_data(pdf.to_pdf, :filename => @submission.pdf_filename)
+    send_data(pdf.to_pdf, :filename => @submission.pdf_filename, :type => "application/pdf", :x_sendfile => true)
   end
 
   protected
