@@ -42,6 +42,10 @@
       <dt><%= f.label :body %></dt>
       <dd><%= f.text_area :body, :required => true, :placeholder => "Limit is 1600 characters" %><dd>
     </dl>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Image</legend>
     <%= f.file_field :image, :class => :image %>
   </fieldset>
 

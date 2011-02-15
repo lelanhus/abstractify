@@ -11,3 +11,16 @@ two:
   start_date: 2011-02-12
   end_date: 2011-02-12
   submission_deadline: 2011-02-12 16:36:20
+
+
+# == Schema Info
+#
+# Table name: conferences
+#
+#  id                  :integer         not null, primary key
+#  end_date            :date
+#  name                :string(255)
+#  start_date          :date
+#  submission_deadline :datetime
+#  created_at          :datetime
+#  updated_at          :datetime

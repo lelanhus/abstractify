@@ -3,20 +3,27 @@
 <head>
   <title>Abstractify</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'jquery.min', 'rails', 'application' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
     <div id="user_block">
       <div>
         <nav>
-          <%= link_to "Conferences", conferences_path %> |
-          <%= link_to "Submissions", submissions_path %> 
+          <%= link_to "Conferences", conferences_path %>
+ 
           <%  unless Conference.accepting_submissions.blank? %>
             |
-            <%= link_to "New Subission", new_submission_path %>
+            <%= link_to "New Submission", new_submission_path %>
+          <% end %>
+          
+          <% if user_signed_in? %>
+            | 
+            <%= link_to "My Submissions", submissions_path unless current_user.admin? %>
+            <%= link_to "All Submissions", submissions_path if current_user.admin? %>
           <% end %>
         </nav>
+        
         <% if user_signed_in? %>
           <p>
             logged in as <%= current_user.email %> |

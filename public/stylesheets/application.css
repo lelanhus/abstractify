@@ -17,7 +17,7 @@
 .grid_5, a.abstract_link {
   width: 380px; }
 
-.grid_6, div#user_block nav, div#user_block p, form#new_submission fieldset#author_info dd {
+.grid_6, div#user_block nav, form#new_submission fieldset#author_info dd {
   width: 460px; }
 
 .grid_7, ul#grouped_submissions li.conference ul {
@@ -38,7 +38,7 @@
 .grid_12 {
   width: 940px; }
 
-.column, div#user_block nav, div#user_block p, section#submissions, form#new_submission, div#abstract_body, aside, form#new_submission fieldset#author_info dt, form#new_submission fieldset#author_info dd, form#new_submission fieldset#abstract_info dl, ul#grouped_submissions li.conference hgroup, ul#grouped_submissions li.conference ul {
+.column, div#user_block nav, section#submissions, form#new_submission, div#abstract_body, aside, form#new_submission fieldset#author_info dt, form#new_submission fieldset#author_info dd, form#new_submission fieldset#abstract_info dl, ul#grouped_submissions li.conference hgroup, ul#grouped_submissions li.conference ul {
   margin: 0 10px;
   overflow: hidden;
   float: left;
@@ -88,6 +88,8 @@ section#submissions ul {
 
 aside a {
   display: block; }
+aside a.standard {
+  display: inline; }
 
 form#new_submission fieldset {
   margin-bottom: 20px; }

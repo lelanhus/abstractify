@@ -14,8 +14,6 @@ div#user_block {
     @extend .row;
   }
   nav, p {
-    @extend .column;
-    @extend .grid_6;
     a {
       display: inline-block;
       padding: 5px 0px 5px 0px;
@@ -23,6 +21,10 @@ div#user_block {
   }
   p {
     text-align: right;
+  }
+  nav {
+    @extend .column;
+    @extend .grid_6;
   }
 }
 
@@ -55,6 +57,9 @@ aside {
   @extend .grid_4;
   a {
     display: block;
+  }
+  a.standard {
+    display: inline;
   }
 }
 

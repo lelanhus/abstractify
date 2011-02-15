@@ -6,3 +6,16 @@ class ConferenceTest < ActiveSupport::TestCase
     assert true
   end
 end
+
+
+# == Schema Info
+#
+# Table name: conferences
+#
+#  id                  :integer         not null, primary key
+#  end_date            :date
+#  name                :string(255)
+#  start_date          :date
+#  submission_deadline :datetime
+#  created_at          :datetime
+#  updated_at          :datetime

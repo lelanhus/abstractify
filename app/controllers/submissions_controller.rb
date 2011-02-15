@@ -1,8 +1,13 @@
 class SubmissionsController < InheritedResources::Base
-  before_filter :authenticate_user!, :except => [:index, :show, :download_pdf]
-
+  before_filter :authenticate_user!
+  
   def index
-    @submissions = Submission.all
+    if current_user.admin?
+      @submissions = Submission.all
+    else
+      @submissions = current_user.submissions
+    end
+    
     @grouped_submissions = @submissions.group_by { |t| t.conference }
   end
   
