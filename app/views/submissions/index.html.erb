@@ -13,7 +13,7 @@
       </hgroup>
       <ul>
         <% for submission in submissions %>
-          <li><%= link_to submission.title, submission %> | <%= link_to 'Download PDF', submission_path(submission, :format => "pdf") %></li>
+          <li><%= link_to submission.title, submission %> | <%= link_to 'Download PDF', submission_path(submission) %></li>
         <% end %>
       </ul>
     </li>

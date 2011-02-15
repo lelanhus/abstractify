@@ -33,6 +33,6 @@
     <% end %>
   <% end %>
 
-  <%= link_to 'Download PDF', download_pdf_submission_path(@submission, :format => "pdf") %>
+  <%= link_to 'Download PDF', download_pdf_submission_path(@submission), :class => :pdf_link %>
   </aside>
 <% end %>
