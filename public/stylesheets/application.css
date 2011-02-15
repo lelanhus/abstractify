@@ -35,10 +35,10 @@
 .grid_11 {
   width: 860px; }
 
-.grid_12 {
+.grid_12, footer p {
   width: 940px; }
 
-.column, div#user_block nav, section#submissions, form#new_submission, div#abstract_body, aside, form#new_submission fieldset#author_info dt, form#new_submission fieldset#author_info dd, form#new_submission fieldset#abstract_info dl, ul#grouped_submissions li.conference hgroup, ul#grouped_submissions li.conference ul {
+.column, footer p, div#user_block nav, section#submissions, form#new_submission, div#abstract_body, aside, form#new_submission fieldset#author_info dt, form#new_submission fieldset#author_info dd, form#new_submission fieldset#abstract_info dl, ul#grouped_submissions li.conference hgroup, ul#grouped_submissions li.conference ul {
   margin: 0 10px;
   overflow: hidden;
   float: left;
@@ -62,8 +62,9 @@ body, article, section, header, hgroup, aside, h1, h2, p, a, img, nav, label, in
 
 footer {
   padding-top: 20px;
-  margin-top: 20px;
-  text-align: center; }
+  margin-top: 20px; }
+  footer p {
+    text-align: center; }
 
 div#user_block {
   margin-bottom: 20px; }

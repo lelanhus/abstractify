@@ -5,7 +5,11 @@ article#page, footer {
 footer {
   padding-top: 20px;
   margin-top: 20px;
-  text-align: center;
+  p {
+    @extend .column;
+    @extend .grid_12;
+    text-align: center;
+  }
 }
 
 div#user_block {
