@@ -2,9 +2,7 @@ class Submission < ActiveRecord::Base
   belongs_to :conference
   belongs_to :user
   
-  has_attached_file :image, :styles => { :pdf => "380x380>" },
-                    :path => ":rails_root/public/system/:attachment/:style/:normalized_image_file_name",
-                    :url => "/system/:attachment/:style/:normalized_image_file_name"
+  has_attached_file :image, :styles => { :pdf => "380x380>" }
   
   process_in_background :image
   
@@ -18,14 +16,6 @@ class Submission < ActiveRecord::Base
   before_save :validates_conference_is_accepting_submissions
   
   attr_protected :user_id
-  
-  Paperclip.interpolates :normalized_image_file_name do |attachment, style|
-    attachment.instance.normalized_image_file_name
-  end
-  
-  def normalized_image_file_name
-    "#{self.image_file_name.gsub( /[^a-zA-Z0-9_\.]/, '_')}" 
-  end
   
   def pdf_filename
     self.title.gsub(/[^0-9A-Za-z]/, '_') + "_" + Time.now.to_i.to_s
