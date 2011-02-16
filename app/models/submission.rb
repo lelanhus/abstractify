@@ -2,6 +2,8 @@ class Submission < ActiveRecord::Base
   belongs_to :conference
   belongs_to :user
   
+  has_attached_file :image, :styles => { :pdf => "380x380>" }
+  
   process_in_background :image
   
   validates_attachment_content_type :image, 
