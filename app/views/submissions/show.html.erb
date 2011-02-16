@@ -1,7 +1,7 @@
 <% content_for :header do %>
   <hgroup>
     <h1><%= @submission.title %></h1>
-    <h2><%= link_to @submission.conference.name + " Conference", conference_path(@submission.conference) %></h2>
+    <h2>Conference: <%= @submission.conference.name %></h2>
   </hgroup>
 <% end %>
 
