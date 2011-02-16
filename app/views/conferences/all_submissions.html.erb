@@ -1,4 +1,4 @@
-<div style="page-break-after:always;">
+<div>
     <h1>
       <%= @conference.name %>
     </h1>
@@ -13,6 +13,7 @@
 
 <div>
   <h1>Submissions</h1>
+  <p><%= pluralize(@conference.submissions.count, "submission") %></p>
   <hr />
   
   <% @conference.submissions.each do |submission| %>
