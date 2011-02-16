@@ -11,15 +11,8 @@
 
   <%= raw RedCloth.new(@submission.body, [:filter_html]).to_html %>
   
-  <% if @submission.has_image? %>
-    <% if @submission.image.url(:pdf).nil? %>
-      <p>
-        The image is still processing.
-      </p>
-    <% else %>
-      <%= image_tag @submission.image.url(:pdf) %>
-    <% end %>
-  <% end %>
+  <%= image_tag @submission.image.url(:pdf) if @submission.has_image? %>
+
 </div>
 
 

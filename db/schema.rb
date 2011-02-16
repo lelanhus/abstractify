@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110216191352) do
+ActiveRecord::Schema.define(:version => 20110216194000) do
 
   create_table "conferences", :force => true do |t|
     t.string   "name"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(:version => 20110216191352) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.boolean  "image_processing"
   end
 
   add_index "submissions", ["conference_id"], :name => "index_submissions_on_conference_id"
