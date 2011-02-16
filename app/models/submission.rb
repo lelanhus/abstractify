@@ -4,6 +4,8 @@ class Submission < ActiveRecord::Base
   
   has_attached_file :image, :styles => { :pdf => "380x380>" }
   
+  process_in_background :image
+  
   validates_attachment_content_type :image, 
                                     :content_type => ['image/jpeg', 'image/png', 'image/gif']
   validates :title, :authors, :institutions, :body, :user_id, :conference_id, :presence => true

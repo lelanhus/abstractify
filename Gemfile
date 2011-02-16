@@ -13,6 +13,8 @@ gem 'haml'
 gem 'capistrano'
 gem 'jquery-rails'
 gem 'rack-ssl'
+gem 'delayed_paperclip'
+gem 'delayed_job'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
