@@ -1,0 +1,31 @@
+<div style="page-break-after:always;">
+    <h1>
+      <%= @conference.name %>
+    </h1>
+  <p>
+    <%= @conference.start_date.strftime("%b %d") %> &mdash; <%= @conference.end_date.strftime("%b %d") %>
+  </p>
+  <p class="year"><%= @conference.start_date.strftime("%Y") %></p>
+  <p class="submission_deadline">
+    Submission Deadline: <%= @conference.submission_deadline.to_s(:submission_deadline) %>
+  </p>
+</div>
+
+<div>
+  <h1>Submissions</h1>
+  <hr />
+  
+  <% @conference.submissions.each do |submission| %>
+    <div style="page-break-after: always;">
+      <h1><%= submission.title %></h1>
+
+      <p><%= submission.authors %></p>
+      <p><%= submission.institutions %></p>
+      <div id="body">
+        <%= raw RedCloth.new(submission.body, [:filter_html]).to_html %>
+      </div>
+      <%= image_tag submission.image.path(:pdf) if submission.has_image? %>
+    </div>
+  <% end %>
+</div>
+

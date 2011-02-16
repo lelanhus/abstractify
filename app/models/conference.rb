@@ -11,6 +11,10 @@ class Conference < ActiveRecord::Base
     return true if submission_deadline >= Time.now
     false
   end
+  
+  def pdf_filename
+    self.name.gsub(/[^0-9A-Za-z]/, '_') + "_" + Time.now.to_i.to_s
+  end
 end
 
 
