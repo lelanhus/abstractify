@@ -24,5 +24,7 @@ Abstractify::Application.configure do
   config.action_dispatch.best_standards_support = :builtin
   
   APP_URL = ENV['http://abstractify.local']
+  
+  Paperclip.options[:command_path] = "/usr/local/bin"
 end
 

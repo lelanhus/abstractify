@@ -6,5 +6,5 @@
   <div id="body">
     <%= raw RedCloth.new(@submission.body, [:filter_html]).to_html %>
   </div>
-  <%= image_tag @submission.image.path if @submission.has_image? %>
+  <%= image_tag @submission.image.path(:pdf) if @submission.has_image? %>
 </div>
