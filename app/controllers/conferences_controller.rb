@@ -1,3 +1,3 @@
 class ConferencesController < InheritedResources::Base
-  actions :index, :show
+  actions :index
 end
