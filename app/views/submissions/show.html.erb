@@ -10,7 +10,7 @@
   <p id="institutions"><%= @submission.institutions %></p>
 
   <%= raw RedCloth.new(@submission.body, [:filter_html]).to_html %>
-  <%= image_tag @submission.image.url if @submission.has_image? %>
+  <%= image_tag @submission.image.url(:pdf) if @submission.has_image? %>
 </div>
 
 
