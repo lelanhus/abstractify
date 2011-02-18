@@ -1,5 +1,6 @@
 class SubmissionsController < InheritedResources::Base
   before_filter :authenticate_user!
+  respond_to :js, :only => :show
       
   def index
     if current_user.admin?

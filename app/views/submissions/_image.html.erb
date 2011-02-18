@@ -1,0 +1,3 @@
+<span id="<%= @submission.image_processing ? 'missing_image' : 'image' %>" data-id="<%= @submission.id %>">
+  <%= image_tag @submission.image.url(:pdf) %>
+</span>

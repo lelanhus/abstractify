@@ -11,8 +11,7 @@
 
   <%= raw RedCloth.new(@submission.body, [:filter_html]).to_html %>
   
-  <%= image_tag @submission.image.url(:pdf) if @submission.has_image? %>
-
+  <%= render 'image' if @submission.has_image? %>
 </div>
 
 
