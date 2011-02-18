@@ -9,7 +9,11 @@ class Submission < ActiveRecord::Base
   validates_attachment_content_type :image, 
                                     :content_type => ['image/jpeg', 'image/png', 'image/gif']
                                     
-  validates :image_file_name, :format => { :with => /^[a-zA-Z-0-9]\S*$/ }, :if => :has_image?
+  validates :image_file_name, :format => { 
+                                          :with => /^[a-zA-Z-0-9]\S*$/, 
+                                          :message => "cannot contain spaces or special characters." 
+                                         }, :if => :has_image?
+                              
   validates :title, :authors, :institutions, :body, :user_id, :conference_id, :presence => true
   validates :title, :authors, :institutions, :length => { :maximum => 255 }
   validates :body, :length => { :maximum => 1650 }
