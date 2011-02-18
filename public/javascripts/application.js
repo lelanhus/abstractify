@@ -10,4 +10,5 @@ $(function () {
 function updateSubmissionImage() {
   var submission_id = $('#missing_image').attr('data-id')
   $.getScript('/submissions/' + submission_id + '.js');
+  setTimeout(updateSubmissionImage, 5000);
 }
