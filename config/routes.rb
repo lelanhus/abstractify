@@ -10,7 +10,7 @@ Abstractify::Application.routes.draw do
 
   devise_for :users
   
-
+  resources :faqs
   
   root :to => "conferences#index"
 
